@@ -6,9 +6,18 @@
 }
 
 #search-btn {
+	border: 2px solid #7ea8be;
 	border-radius: 25px;
-	border-color: #7ea8be;
 	padding: 10px 30px 10px 30px;
 	background-color: #7ea8be;
 	color: #fff;
+	margin-left: 15px;
+}
+
+#result-container {
+	margin-top: 25px;
+}
+
+#city-info {
+	margin-top: 25px;
 }
