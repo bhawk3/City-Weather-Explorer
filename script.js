@@ -1,6 +1,8 @@
-const searchInput = document.getElementById("search-input").value;
-const searchBtn = document.getElementById("search-btn");
+const searchInput = document.getElementById("search-input");
+const weatherForm = document.getElementById("weather-form");
 const resultContainer = document.getElementById("result-container");
+const cityInfo = document.getElementById("city-info");
+const apiKey = "0b1f9bc175eb05f8b91cb668916c5ccf";
 
 //Set up the event listener to the api
 //Check if there is any data input
@@ -8,22 +10,27 @@ const resultContainer = document.getElementById("result-container");
 //Pass the Long. and Lat. to the National Weather Service api
 //Display the forcast to the DOM
 
-searchBtn.addEventListener("click", async () => {
-	if (!searchInput) {
-		return alert("An error has occurred. Please select a different city.");
+weatherForm.addEventListener("submit", async (event) => {
+	event.preventDefault();
+	const input = searchInput.value;
+
+	if (city) {
+	} else {
+		displayError("Please enter a city");
 	}
-
-	try {
-		const response = await fetch(`https://api.weather.gov/points/{latitude},{longitude}`);
-
-		if (!response.ok) {
-			throw new Error("Could not get the data");
-		}
-
-		const data = response.json();
-
-		resultContainer.innerHTML = data.Search.map(() => {
-			console.log(data);
-		});
-	} catch (error) {}
 });
+
+async function getWeatherData(city) {}
+
+async function displayWeatherInfo(data) {}
+
+async function getWeatherEmoji(weatherID) {}
+
+async function displayError(message) {
+	const errorDisplay = document.createElement("P");
+	errorDisplay.textContent = message;
+	errorDisplay.classList.add("errorDisplay");
+
+	cityInfo.textContent = "";
+	cityInfo.style.display = "flex";
+}

@@ -14,8 +14,10 @@
 
 		<main class="main-container centered">
 			<section class="search-section">
-				<input type="text" id="city-input" placeholder="Enter city name..." aria-label="City name" />
-				<button id="search-btn">Search</button>
+				<form id="weather-form">
+					<input type="text" id="city-input" placeholder="Enter city name..." aria-label="City name" />
+					<button type="submit">Search</button>
+				</form>
 			</section>
 
 			<section id="result-container" class="result-container">
@@ -23,7 +25,7 @@
 				<div id="loading" class="loading hidden">Loading...</div>
 				<div id="error" class="error hidden"></div>
 
-				<div id="city-info" class="city-info hidden">
+				<div id="city-info" class="city-info" style="display: none">
 					<img id="city-image" src="" alt="City view" />
 					<div class="weather-details">
 						<h2 id="city-name"></h2>
