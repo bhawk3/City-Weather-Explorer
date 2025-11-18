@@ -9,6 +9,10 @@
 	margin-top: 25px;
 }
 
+.footer {
+	margin-top: auto;
+}
+
 #city-info {
 	margin-top: 25px;
 }
@@ -19,12 +23,13 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	min-height: 100vh;
 }
 .weatherForm {
 	margin: 20px;
 }
 .cityInput {
-	padding: 10px;
+	padding: 20px;
 	font-size: 2rem;
 	font-weight: bold;
 	border: 2px solid hsla(0, 0%, 20%, 0.3);
@@ -33,9 +38,9 @@ body {
 	width: 300px;
 }
 button[type="submit"] {
-	padding: 10px 20px;
+	padding: 10px 15px;
 	font-weight: bold;
-	font-size: 2rem;
+	font-size: 1rem;
 	background-color: hsl(122, 39%, 50%);
 	color: white;
 	border: none;
@@ -45,7 +50,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
 	background-color: hsl(122, 39%, 40%);
 }
-.card {
+.result-container {
 	background: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%));
 	padding: 50px;
 	border-radius: 10px;

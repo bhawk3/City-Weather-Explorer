@@ -14,7 +14,7 @@ weatherForm.addEventListener("submit", async (event) => {
 	event.preventDefault();
 	const input = searchInput.value;
 
-	if (city) {
+	if (input) {
 	} else {
 		displayError("Please enter a city");
 	}
@@ -27,10 +27,11 @@ async function displayWeatherInfo(data) {}
 async function getWeatherEmoji(weatherID) {}
 
 async function displayError(message) {
-	const errorDisplay = document.createElement("P");
+	const errorDisplay = document.createElement("p");
 	errorDisplay.textContent = message;
 	errorDisplay.classList.add("errorDisplay");
 
-	cityInfo.textContent = "";
-	cityInfo.style.display = "flex";
+	resultContainer.textContent = "";
+	resultContainer.style.display = "flex";
+	card.appendChild(errorDisplay);
 }
